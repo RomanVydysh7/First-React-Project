@@ -7,6 +7,8 @@ ul li {
 	width: 50px;
 }
 .app-wrapper {
+	width: 1200px;
+	margin: 0 auto;
 	display: grid;
 	grid-template-areas:
 		'h h h'
@@ -15,10 +17,7 @@ ul li {
 	grid-template-columns: 2fr 10fr;
 	grid-gap: 10px;
 }
-.app-header {
-	grid-area: h;
-	background-color: dimgrey;
-}
+
 .app-nav {
 	grid-area: n;
 	background-color: forestgreen;
@@ -26,4 +25,21 @@ ul li {
 .app-main {
 	grid-area: m;
 	background-color: brown;
+}
+.app-nav a {
+	text-decoration: none;
+	color: black;
+}
+.app-header {
+	grid-area: h;
+	background-color: dimgrey;
+}
+
+.title-photo {
+	width: 100%;
+	height: 300px;
+}
+.avatar {
+	height: 100px;
+	width: 100px;
 }

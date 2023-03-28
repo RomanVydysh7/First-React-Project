@@ -1,20 +1,15 @@
 import './App.css'
 
+import Header from './Components/Header/Header'
+import Nav from './Components/Nav/Nav'
+import App_main from './Components/App-main/App-main'
+
 function App() {
 	return (
 		<div className='app-wrapper'>
-			<header className='app-header'>
-				<img
-					src='https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg'
-					className='logo'
-					alt='1'
-				/>
-			</header>
-			<nav className='app-nav'>
-				<div>Profile</div>
-				<div>Message</div>
-			</nav>
-			<div className='app-main'>MainContent</div>
+			<Header />
+			<Nav />
+			<App_main />
 		</div>
 	)
 }
