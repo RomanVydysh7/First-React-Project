@@ -2,8 +2,19 @@ import './App.css'
 
 function App() {
 	return (
-		<div className='App'>
-			<header className='App-header'>Taitake1</header>
+		<div className='app-wrapper'>
+			<header className='app-header'>
+				<img
+					src='https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg'
+					className='logo'
+					alt='1'
+				/>
+			</header>
+			<nav className='app-nav'>
+				<div>Profile</div>
+				<div>Message</div>
+			</nav>
+			<div className='app-main'>MainContent</div>
 		</div>
 	)
 }
