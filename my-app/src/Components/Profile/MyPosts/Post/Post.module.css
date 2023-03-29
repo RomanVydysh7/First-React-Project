@@ -1,0 +1,18 @@
+.item {
+	color: green;
+}
+.posts {
+	margin: 10px;
+	align-items: center;
+}
+.buttons {
+}
+.Avatarpost {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.posttext {
+	display: flex;
+	align-items: center;
+}

@@ -1,6 +1,8 @@
+import classes from './Nav.module.css'
+
 function Nav() {
 	return (
-		<nav className='app-nav'>
+		<nav className={classes.app_nav}>
 			<div>
 				<a href='#'>Profile</a>
 			</div>

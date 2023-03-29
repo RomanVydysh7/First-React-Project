@@ -1,0 +1,8 @@
+.logo {
+	height: 50px;
+	width: 50px;
+}
+.app_header {
+	grid-area: h;
+	background-color: dimgrey;
+}
