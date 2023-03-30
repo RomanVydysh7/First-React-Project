@@ -1,22 +1,58 @@
 import classes from './Nav.module.css'
+import { NavLink } from 'react-router-dom'
 
 function Nav() {
 	return (
 		<nav className={classes.app_nav}>
 			<div>
-				<a href='#'>Profile</a>
+				<NavLink
+					to='/profile'
+					style={({ isActive }) => ({
+						color: isActive ? 'greenyellow' : 'white',
+					})}
+				>
+					Profile
+				</NavLink>
 			</div>
 			<div>
-				<a href='#'>Message</a>
+				<NavLink
+					to='/message'
+					style={({ isActive }) => ({
+						color: isActive ? 'greenyellow' : 'white',
+					})}
+				>
+					Message
+				</NavLink>
 			</div>
 			<div>
-				<a href='#'>News</a>
+				<NavLink
+					to='/news'
+					style={({ isActive }) => ({
+						color: isActive ? 'greenyellow' : 'white',
+					})}
+				>
+					News
+				</NavLink>
 			</div>
 			<div>
-				<a href='#'>Music</a>
+				<NavLink
+					to='/music'
+					style={({ isActive }) => ({
+						color: isActive ? 'greenyellow' : 'white',
+					})}
+				>
+					Music
+				</NavLink>
 			</div>
 			<div>
-				<a href='#'>Settings</a>
+				<NavLink
+					to='/settings'
+					style={({ isActive }) => ({
+						color: isActive ? 'greenyellow' : 'white',
+					})}
+				>
+					Settings
+				</NavLink>
 			</div>
 		</nav>
 	)

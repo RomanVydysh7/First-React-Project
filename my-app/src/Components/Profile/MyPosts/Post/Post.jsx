@@ -9,7 +9,7 @@ function Post(Props) {
 				<div className={classes.item}>{Props.text}</div>
 			</div>
 			<div>
-				<span>Like</span>
+				<span>Like {Props.like}</span>
 			</div>
 		</div>
 	)

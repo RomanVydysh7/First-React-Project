@@ -11,9 +11,9 @@ function MyPosts() {
 				<button>Add post</button>
 				<button>Remove</button>
 			</div>
-			<Post text='Hello' />
-			<Post text='I know React' />
-			<Post text='First comment' />
+			<Post text='Hello' like='5' />
+			<Post text='I know React' like='3' />
+			<Post text='First comment' like='0' />
 		</div>
 	)
 }

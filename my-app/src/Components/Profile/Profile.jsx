@@ -5,7 +5,7 @@ import MyPosts from './MyPosts/MyPosts'
 
 function Profile() {
 	return (
-		<div className={classes.app_main}>
+		<div>
 			<div>
 				<img src={img1} alt='1' className={classes.title_photo} />
 			</div>

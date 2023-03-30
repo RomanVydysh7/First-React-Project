@@ -6,3 +6,9 @@
 	grid-area: n;
 	background-color: forestgreen;
 }
+.nav {
+	color: white;
+}
+.activeNav {
+	color: gold;
+}
