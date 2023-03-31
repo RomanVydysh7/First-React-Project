@@ -13,8 +13,8 @@ function App() {
 				<Nav />
 				<div className='app-wrapper-content'>
 					<Routes>
-						<Route path='/profile' element={<Profile />} />
-						<Route path='/message' element={<Message />} />
+						<Route exact path='/profile' element={<Profile />} />
+						<Route exact path='/message' element={<Message />} />
 					</Routes>
 				</div>
 			</div>

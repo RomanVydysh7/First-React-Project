@@ -5,7 +5,7 @@ function Post(Props) {
 	return (
 		<div className={classes.posts}>
 			<div className={classes.posttext}>
-				<img src={img} className={classes.Avatarpost} alt='1'></img>
+				<img src={img} className={classes.Avatarpost} alt={Props.id}></img>
 				<div className={classes.item}>{Props.text}</div>
 			</div>
 			<div>
