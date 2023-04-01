@@ -1,11 +1,11 @@
 import './App.css'
-import Message from './Components/Dialogs/Dialogs'
+import { Dialogs } from './Components/Dialogs/Dialogs'
 import Header from './Components/Header/Header'
 import Nav from './Components/Nav/Nav'
 import Profile from './Components/Profile/Profile'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
-function App() {
+function App(Props) {
 	return (
 		<BrowserRouter>
 			<div className='app-wrapper'>
@@ -13,8 +13,18 @@ function App() {
 				<Nav />
 				<div className='app-wrapper-content'>
 					<Routes>
-						<Route exact path='/profile' element={<Profile />} />
-						<Route exact path='/message' element={<Message />} />
+						<Route
+							exact
+							path='/profile'
+							element={<Profile posts={Props.posts} />}
+						/>
+						<Route
+							exact
+							path='/message'
+							element={
+								<Dialogs dialogs={Props.dialogs} message={Props.message} />
+							}
+						/>
 					</Routes>
 				</div>
 			</div>
