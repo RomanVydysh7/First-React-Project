@@ -16,7 +16,13 @@ function App(Props) {
 						<Route
 							exact
 							path='/profile'
-							element={<Profile posts={Props.posts} />}
+							element={
+								<Profile
+									changeStroke={Props.changeStroke}
+									addPost={Props.addPost}
+									posts={Props.posts}
+								/>
+							}
 						/>
 						<Route
 							exact
