@@ -1,4 +1,4 @@
-import { rerenertree } from '../render'
+let rerenertree = () => {}
 
 const state = {
 	profilePage: {
@@ -38,6 +38,9 @@ export let addPost = () => {
 export let changeStroke = Stroke => {
 	state.profilePage.newPostText = Stroke
 	rerenertree(state)
+}
+export let Render = callback1 => {
+	rerenertree = callback1
 }
 
 export default state
