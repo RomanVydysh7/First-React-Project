@@ -5,11 +5,7 @@ function Profile(Props) {
 	return (
 		<div>
 			<ProfileInfo />
-			<MyPosts
-				changeStroke={Props.changeStroke}
-				posts={Props.posts}
-				addPost={Props.addPost}
-			/>
+			<MyPosts store={Props.store} />
 		</div>
 	)
 }

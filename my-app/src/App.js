@@ -16,20 +16,12 @@ function App(Props) {
 						<Route
 							exact
 							path='/profile'
-							element={
-								<Profile
-									changeStroke={Props.changeStroke}
-									addPost={Props.addPost}
-									posts={Props.posts}
-								/>
-							}
+							element={<Profile store={Props.store} />}
 						/>
 						<Route
 							exact
 							path='/message'
-							element={
-								<Dialogs dialogs={Props.dialogs} message={Props.message} />
-							}
+							element={<Dialogs store={Props.store} />}
 						/>
 					</Routes>
 				</div>

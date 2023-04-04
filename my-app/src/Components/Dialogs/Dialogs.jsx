@@ -7,12 +7,12 @@ export const Dialogs = Props => {
 	return (
 		<div className={style.app_dialogs}>
 			<div className={style.dialogs_items}>
-				{Props.dialogs.map(item => (
+				{Props.store._state.dialogsData.map(item => (
 					<DialogItem id={item.id} name={item.name} />
 				))}
 			</div>
 			<div className={style.messages}>
-				{Props.message.map(item => (
+				{Props.store._state.messageData.map(item => (
 					<Messag messageSend={item.message} id={item.id} />
 				))}
 			</div>

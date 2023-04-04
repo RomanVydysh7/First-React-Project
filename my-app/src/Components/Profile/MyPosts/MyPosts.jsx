@@ -4,14 +4,15 @@ import React from 'react'
 
 function MyPosts(Props) {
 	let element = React.createRef()
+	console.log(Props.store)
 
 	let addPost1 = () => {
-		Props.addPost()
-		Props.changeStroke('')
+		Props.store.dispatch({ type: 'addpost' })
+		Props.store.dispatch({ type: 'changeStroke', stroke: '' })
 	}
 	let onPostChange = () => {
 		let text = element.current.value
-		Props.changeStroke(text)
+		Props.store.dispatch({ type: 'changeStroke', stroke: text })
 	}
 	return (
 		<div>
@@ -22,7 +23,7 @@ function MyPosts(Props) {
 					<textarea
 						onChange={onPostChange}
 						ref={element}
-						value={Props.posts.newPostText}
+						value={Props.store._state.profilePage.newPostText}
 					/>
 				</div>
 				<div>
@@ -30,7 +31,7 @@ function MyPosts(Props) {
 				</div>
 			</div>
 			<div className={classes.posts}>
-				{Props.posts.postData.map(item => (
+				{Props.store._state.profilePage.postData.map(item => (
 					<Post text={item.message} like={item.like} id={item.id} />
 				))}
 			</div>
