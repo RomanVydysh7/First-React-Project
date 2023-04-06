@@ -1,18 +1,22 @@
 import classes from './MyPosts.module.css'
 import Post from './Post/Post'
 import React from 'react'
+import {
+	addPostActionCreator,
+	onPostChangeActionCreatore,
+} from '../../../redux/state'
 
 function MyPosts(Props) {
 	let element = React.createRef()
 	console.log(Props.store)
 
 	let addPost1 = () => {
-		Props.store.dispatch({ type: 'addpost' })
-		Props.store.dispatch({ type: 'changeStroke', stroke: '' })
+		Props.store.dispatch(addPostActionCreator())
+		Props.store.dispatch(onPostChangeActionCreatore(''))
 	}
 	let onPostChange = () => {
 		let text = element.current.value
-		Props.store.dispatch({ type: 'changeStroke', stroke: text })
+		Props.store.dispatch(onPostChangeActionCreatore(text))
 	}
 	return (
 		<div>
