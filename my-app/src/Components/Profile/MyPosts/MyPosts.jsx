@@ -4,11 +4,10 @@ import React from 'react'
 import {
 	addPostActionCreator,
 	onPostChangeActionCreatore,
-} from '../../../redux/state'
+} from '../../../redux/profileReducer'
 
 function MyPosts(Props) {
 	let element = React.createRef()
-	console.log(Props.store)
 
 	let addPost1 = () => {
 		Props.store.dispatch(addPostActionCreator())

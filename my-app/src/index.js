@@ -11,5 +11,5 @@ let rerenertree = store => {
 		</React.StrictMode>
 	)
 }
-store.Render(rerenertree)
 rerenertree(store)
+store.Render(rerenertree)

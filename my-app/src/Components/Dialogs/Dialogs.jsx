@@ -2,7 +2,7 @@ import React from 'react'
 import style from './Dialogs.module.css'
 import Messag from './Messag/Messag'
 import DialogItem from './DialogItem/DialogItem'
-import { onChangeMessage, onPushMessage } from '../../redux/state'
+import { onChangeMessage, onPushMessage } from '../../redux/dialogsReducer'
 
 export const Dialogs = Props => {
 	let element = React.createRef()
