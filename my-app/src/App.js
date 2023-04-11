@@ -13,16 +13,8 @@ function App(Props) {
 				<Nav />
 				<div className='app-wrapper-content'>
 					<Routes>
-						<Route
-							exact
-							path='/profile'
-							element={<Profile store={Props.store} />}
-						/>
-						<Route
-							exact
-							path='/message'
-							element={<Dialogs store={Props.store} />}
-						/>
+						<Route exact path='/profile' element={<Profile />} />
+						<Route exact path='/message' element={<Dialogs />} />
 					</Routes>
 				</div>
 			</div>

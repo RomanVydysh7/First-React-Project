@@ -1,15 +1,12 @@
 import React from 'react'
-import * as ReactDOM from 'react-dom'
+import * as ReactDOM from 'react-dom/client'
 import './index.css'
+import { Provider } from 'react-redux'
 import App from './App'
-import store from './redux/state'
+import store from './redux/redux-store'
 const root = ReactDOM.createRoot(document.getElementById('root'))
-let rerenertree = store => {
-	root.render(
-		<React.StrictMode>
-			<App store={store} />
-		</React.StrictMode>
-	)
-}
-rerenertree(store)
-store.Render(rerenertree)
+root.render(
+	<Provider store={store}>
+		<App />
+	</Provider>
+)

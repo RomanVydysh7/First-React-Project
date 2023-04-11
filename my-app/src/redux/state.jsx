@@ -1,5 +1,6 @@
 import dialogsReducer from './dialogsReducer'
 import profileReducer from './profileReducer'
+
 import sidebarReducer from './sidebarReducer'
 
 let rerenertree = () => {}
@@ -48,5 +49,4 @@ let store = {
 		return this._state
 	},
 }
-
 export default store
