@@ -2,18 +2,19 @@ import classes from './MyPosts.module.css'
 import Post from './Post/Post'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { CHANGE_STROKE, ADD_POST } from '../../../redux/profileSlice'
 
 function MyPosts() {
 	let element = React.createRef()
 	const dispatch = useDispatch()
-	const message1 = useSelector(store => store.profileReducer.newPostText)
-	const dataComments = useSelector(store => store.profileReducer.postData)
+	const message1 = useSelector(store => store.profileSlice.newPostText)
+	const dataComments = useSelector(store => store.profileSlice.postData)
 	let addPost1 = () => {
-		dispatch({ type: 'ADD_POST', payload: element.current.value })
-		dispatch({ type: 'CHANGE_STROKE', payload: '' })
+		dispatch(ADD_POST(element.current.value))
+		dispatch(CHANGE_STROKE(''))
 	}
 	let onPostChange = () => {
-		dispatch({ type: 'CHANGE_STROKE', payload: element.current.value })
+		dispatch(CHANGE_STROKE(element.current.value))
 	}
 
 	return (

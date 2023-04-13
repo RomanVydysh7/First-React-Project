@@ -3,21 +3,19 @@ import style from './Dialogs.module.css'
 import Messag from './Messag/Messag'
 import DialogItem from './DialogItem/DialogItem'
 import { useDispatch, useSelector } from 'react-redux'
+import { SAND_MESSAGE, UPDATE_NEW_MESSAGE_BODY } from '../../redux/dialogsSlice'
 
 export const Dialogs = Props => {
 	let element = React.createRef()
 	let dispatch = useDispatch()
-	let dialogsName = useSelector(state => state.dialogsReducer.dialogsData)
-	let dialogsMessage = useSelector(state => state.dialogsReducer.messageData)
-	let dialogstext = useSelector(state => state.dialogsReducer.newMessageBody)
+	let dialogsName = useSelector(state => state.dialogsSlice.dialogsData)
+	let dialogsMessage = useSelector(state => state.dialogsSlice.messageData)
+	let dialogstext = useSelector(state => state.dialogsSlice.newMessageBody)
 	let onPushFunction = () => {
-		dispatch({ type: 'SAND_MESSAGE', payload: element.current.value })
+		dispatch(SAND_MESSAGE(element.current.value))
 	}
 	let onChangeFunction = () => {
-		dispatch({
-			type: 'UPDATE_NEW_MESSAGE_BODY',
-			payload: element.current.value,
-		})
+		dispatch(UPDATE_NEW_MESSAGE_BODY(element.current.value))
 	}
 
 	return (

@@ -1,16 +1,16 @@
-import { combineReducers } from 'redux'
-import dialogsReducer from './dialogsReducer'
-import profileReducer from './profileReducer'
 import sidebarReducer from './sidebarReducer'
-import { legacy_createStore as createStore } from 'redux'
-
+import dialogsSlice from './dialogsSlice'
+import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import profileSlice from './profileSlice'
 let redusers = combineReducers({
-	dialogsReducer,
-	profileReducer,
+	dialogsSlice,
+	profileSlice,
 	sidebarReducer,
 })
 
-let store = createStore(redusers)
+let store = configureStore({
+	reducer: redusers,
+})
 console.log(store.getState())
 
 export default store
