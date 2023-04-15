@@ -5,7 +5,7 @@ import React from 'react'
 function MyPosts(Props) {
 	return (
 		<div>
-			<h2>My posts</h2>
+			<h2>My postss</h2>
 			<div>New post</div>
 			<div className={classes.buttons}>
 				<div>
