@@ -1,0 +1,20 @@
+ul li {
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.app-wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-areas:
+		'h h h'
+		'n m m';
+	grid-template-rows: 60px 1fr;
+	grid-template-columns: 2fr 10fr;
+	grid-gap: 10px;
+}
+.app-wrapper-content {
+	grid-area: m;
+	background-color: brown;
+}
